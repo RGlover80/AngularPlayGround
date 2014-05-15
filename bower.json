@@ -10,7 +10,6 @@
 		"angularLocalStorage": "latest",
 		"angular-ui-router": "latest",
 		"angular-poller": "latest",
-		"angular-resource": "latest",
-		"angular-socket-io":"latest"
+		"angular-resource": "latest"
 	}
 }
