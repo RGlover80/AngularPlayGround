@@ -1,0 +1,32 @@
+<nav class="navbar navbar-inverse" role="navigation">
+
+</nav>
+
+<div class="jumbotron text-center">
+	<h1>Angular Local Storage</h1>
+
+<div>
+    <div>
+        <div class="row">
+        	<div class="large-4 columns">
+	            <label> {{tagline}} </label>
+	            <input class="col-fluid" ng-model="tagline"></input>
+	        </div>
+        </div>
+        <div class="row">
+            <div class="large-4 columns">
+                <p>Variable: <b>{{test}}</b></p>
+                <label>localStorage variable value:</label> <input type="text" ng-model="test">
+                <a ng-click="clearTest()">Clear Value from LC</a>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<form>
+    <input type="text" name="firstName" ng-model="firstName"> First name <br/>
+    <input type="text" name="lastName"  ng-model="lastName"> Last name <br/>
+</form>
+<div>
+    {{myForm.firstName}} {{myForm.lastName}}
+</div>

@@ -1,0 +1,16 @@
+{
+	"name": "RichApp",
+	"version": "1.0.0",
+	"dependencies": {
+		"bootstrap": "latest",
+		"font-awesome": "latest",
+		"animate.css": "latest",
+		"angular": "latest",
+		"angular-route": "latest",
+		"angularLocalStorage": "latest",
+		"angular-ui-router": "latest",
+		"angular-poller": "latest",
+		"angular-resource": "latest",
+		"angular-socket-io":"latest"
+	}
+}

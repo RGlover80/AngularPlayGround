@@ -1,0 +1,16 @@
+.rating li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 1px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rating .filled {
+  color: red;
+}
+
+.rating .notfilled {
+  color: blue;
+}
