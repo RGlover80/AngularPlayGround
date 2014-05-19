@@ -25,7 +25,7 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'Ne
 
 		// nested list with custom controller
 		.state('about', {
-			url: 'views/partial-about',
+			url: '/about',
 			views: {
 
 				// the main template will be placed here (relatively named)
