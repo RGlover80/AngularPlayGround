@@ -1,17 +1,14 @@
 'use strict';
 
-angular.module('MainCtrl', []).controller('MainController', function($scope, poller, $resource, storage) {
+angular.module('MainCtrl', []).controller('MainController', function($scope, poller, $resource, storage, mySocket) {
 
-
-	/*
-	include mySocket above!
 
 	mySocket.on('news', function(data) {
 		console.log(data);
 		mySocket.emit('my other event', {
 			my: 'data'
 		});
-	}); */
+	}); 
 
 	$scope.tagline = 'To the moon and back!';
 

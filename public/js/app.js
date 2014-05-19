@@ -2,14 +2,14 @@
 
 angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'scotchController', 'GeekService', 'StarDirective', 'angularLocalStorage', 'ui.router', 'emguo.poller', 'ngResource','btford.socket-io'])
 	
-	/*
+	
 	.factory('mySocket', function (socketFactory){
 		var myIoSocket = io.connect('http://localhost');
 		var mySocket = socketFactory({
 			ioSocket: myIoSocket
 		});
 		return mySocket;
-	}) */
+	}) 
 
 	.config(function($stateProvider, $urlRouterProvider) {
 
