@@ -9,7 +9,6 @@ var mongoose = require('mongoose');
 
 // config files
 
-
 var db = require('./config/db');
 
 var port = process.env.PORT || 8080; // set our port
@@ -27,7 +26,19 @@ app.configure(function() {
 require('./app/routes')(app); // configure our routes
 
 // start app ===============================================
-app.listen(port); // startup our app at http://localhost:8080
+//app.listen(port); // startup our app at http://localhost:8080
+var SocketCount = 0;
+
+var io = require('socket.io').listen(app.listen(port));
+
+io.sockets.on('connection', function (socket) {
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    socket.emit('count', {count: SocketCount});
+    console.log(data);
+    SocketCount++;
+  });
+});
 
 console.log('Magic happens on port ' + port); // shoutout to the user
 exports = module.exports = app; // expose app
