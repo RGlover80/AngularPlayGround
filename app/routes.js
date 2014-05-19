@@ -30,7 +30,8 @@ module.exports = function(app) {
 			}];
 		counter++;
 		var date = new Date();
-		console.log(counter +' ' + date );
+		console.log(counter +' ' + date + req.query.counter);
+		res.setHeader('Content-Type', 'text/javascript');
 		res.json(stuff);
 	});
 

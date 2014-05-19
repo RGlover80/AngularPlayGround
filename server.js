@@ -5,9 +5,6 @@
 var express = require('express');
 var app = express();
 var mongoose = require('mongoose');
-var io = require('socket.io');
-var io = io.listen(app);
-
 // configuration 
 
 // config files
@@ -31,13 +28,6 @@ require('./app/routes')(app); // configure our routes
 
 // start app ===============================================
 app.listen(port); // startup our app at http://localhost:8080
-
-io.sockets.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
 
 console.log('Magic happens on port ' + port); // shoutout to the user
 exports = module.exports = app; // expose app
