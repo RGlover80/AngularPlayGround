@@ -12,6 +12,7 @@
 		"angular-poller": "latest",
 		"angular-resource": "latest",
 		"angular-socket-io": "latest",
-		"socket.io-client": "latest"
+		"socket.io-client": "latest",
+		"angular-sticky": "latest"
 	}
 }

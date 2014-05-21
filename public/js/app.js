@@ -16,43 +16,43 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'Ne
 		$stateProvider
 
 		// HOME STATES AND NESTED VIEWS ========================================
-		.state('home', {
-			url: '/home',
-			templateUrl: 'views/home2.html'
+		.state('nested', {
+			url: '/nested',
+			templateUrl: 'views/nested.html'
 		})
 
-		.state('home.list', {
+		.state('nested.list', {
 			url: '/list',
-			templateUrl: 'views/home2-list.html',
+			templateUrl: 'views/nested-list.html',
 			controller: function($scope) {
 				$scope.dogs = ['Bernese', 'Husky', 'Goldendoodle'];
 			}
 		})
 
 		// nested list with just some random string data
-		.state('home.paragraph', {
+		.state('nested.paragraph', {
 			url: '/paragraph',
 			template: 'I could sure use a drink right now.'
 		})
 
 		// nested list with custom controller
-		.state('about', {
-			url: '/about',
+		.state('multipleViews', {
+			url: '/multipleViews',
 			views: {
 
 				// the main template will be placed here (relatively named)
 				'': {
-					templateUrl: 'views/partial-about.html'
+					templateUrl: 'views/multipleViews.html'
 				},
 
 				// the child views will be defined here (absolutely named)
-				'columnOne@about': {
+				'columnOne@multipleViews': {
 					template: 'Look I am a column!'
 				},
 
 				// for column two, we'll define a separate controller 
-				'columnTwo@about': {
-					templateUrl: 'views/partial-data.html',
+				'columnTwo@multipleViews': {
+					templateUrl: 'views/multipleViews-data.html',
 					controller: 'scotchController'
 				}
 			}
