@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'scotchController', 'GeekService', 'StarDirective', 'angularLocalStorage', 'ui.router', 'emguo.poller', 'ngResource','btford.socket-io'])
+angular.module('sampleApp', ['ngRoute', 'MainCtrl', 'NerdCtrl', 'NerdService', 'GeekCtrl', 'scotchController', 'GeekService', 'StarDirective', 'angularLocalStorage', 'ui.router', 'emguo.poller', 'ngResource','btford.socket-io'])
 	
 	
 	.factory('mySocket', function (socketFactory){
@@ -14,6 +14,26 @@ angular.module('sampleApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'NerdCtrl', 'Ne
 	.config(function($stateProvider, $urlRouterProvider) {
 
 		$stateProvider
+
+		.state('home', {
+			url: 'home',
+			templateUrl: 'views/home.html',
+			controller: 'MainController'
+		})
+
+		// nerds page that will use the NerdController
+		.state('nerds', {
+			url: '/nerds',
+			templateUrl: 'views/nerd.html',
+			controller: 'NerdController'
+		})
+
+		// 
+		.state('geeks', {
+			url: '/geeks',
+			templateUrl: 'views/geek.html',
+			controller: 'GeekController'
+		})
 
 		// HOME STATES AND NESTED VIEWS ========================================
 		.state('nested', {

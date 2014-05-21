@@ -29,7 +29,7 @@
 	<script src="js/controllers/scotchController.js"></script>
 	<script src="js/services/GeekService.js"></script>
 	<script src="js/directives/star.js"></script>
-	<script src="js/appRoutes.js"></script>
+	<!--<script src="js/appRoutes.js"></script> -->
 	<script src="js/app.js"></script>
 	
 </head>
@@ -44,15 +44,14 @@
 
 		<!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
 		<ul class="nav navbar-nav">
-			<li><a href="/nerds">Local Storage</a></li>
-			<li><a href="/geeks">Directive</a></li>	
+			<li><a ui-sref="nerds">Local Storage</a></li>
+			<li><a ui-sref="geeks">Directive</a></li>
 			<li><a ui-sref="nested">Nested Views</a></li>
 			<li><a ui-sref="multipleViews">Multiple Views</a></li>
 		</ul>
 	</nav>
-
+	<div ui-sref = 'home'> </div>
 	<!-- ANGULAR DYNAMIC CONTENT -->
-	<div ng-view></div>
 	<div ui-view></div>
 
 </div>
