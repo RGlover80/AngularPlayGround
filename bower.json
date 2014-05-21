@@ -13,6 +13,5 @@
 		"angular-resource": "latest",
 		"angular-socket-io": "latest",
 		"socket.io-client": "latest",
-		"angular-sticky": "latest"
 	}
 }
