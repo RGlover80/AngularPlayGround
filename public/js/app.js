@@ -13,10 +13,11 @@ angular.module('sampleApp', ['ngRoute', 'MainCtrl', 'NerdCtrl', 'NerdService', '
 
 	.config(function($stateProvider, $urlRouterProvider) {
 
+		 $urlRouterProvider.otherwise('/home');
 		$stateProvider
 
 		.state('home', {
-			url: 'home',
+			url: '/home',
 			templateUrl: 'views/home.html',
 			controller: 'MainController'
 		})
