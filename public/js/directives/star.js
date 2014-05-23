@@ -5,7 +5,7 @@ angular.module('StarDirective', [])
     return {
       restrict: 'A',
       template: '<ul class="rating list-inline">' +
-        '<li ng-repeat="star in stars" class="{{star.class}}">' +
+        '<li ng-click="toggle($index)" ng-repeat="star in stars" class="{{star.class}}">' +
         '\u2605' +
         '</li>' +
         '</ul>',
@@ -14,18 +14,30 @@ angular.module('StarDirective', [])
         max: '='
       },
       link: function(scope, elem, attrs) {
-        
+
+        var updateStars = function() {
           scope.stars = [];
-          var starNumber = scope.ratingValue;
           for (var i = 0; i < scope.max; i++) {
             var newStar = {};
             if (i < scope.ratingValue) {
-              newStar.class = "filled";
+              newStar.class = 'filled';
+            } else {
+              newStar.class = 'notfilled';
             }
-            else { newStar.class = 'notfilled'; }
             scope.stars.push(newStar);
           }
-          console.log(scope.stars);
+        };
+
+        scope.$watch('ratingValue', function(oldVal, newVal) {
+          if (newVal) {
+            updateStars();
+          }
+        });
+        scope.toggle = function(index) {
+          scope.ratingValue = index + 1;
+        };
+
+        console.log(scope.stars);
       }
     }
   });
