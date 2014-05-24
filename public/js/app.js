@@ -13,7 +13,7 @@ angular.module('sampleApp', ['ngRoute', 'MainCtrl', 'NerdCtrl', 'NerdService', '
 
 	.config(function($stateProvider, $urlRouterProvider) {
 
-		 $urlRouterProvider.otherwise('/home');
+		$urlRouterProvider.otherwise('/home');
 		$stateProvider
 
 		.state('home', {
@@ -78,7 +78,22 @@ angular.module('sampleApp', ['ngRoute', 'MainCtrl', 'NerdCtrl', 'NerdService', '
 				}
 			}
 
-		});
-		//$urlRouterProvider.otherwise('/home');
+		})
+		.state('game', {
+			url: '/game',
+			templateUrl: 'views/game.html'
+		})
 
+		.state('game.page1', {
+			url: '/page1',
+			templateUrl: 'views/game-page1.html'
+		})
+		.state('game.page2',{
+			url: '/page2',
+			templateUrl: 'views/game-page2.html'
+		})
+		.state('game.page3',{
+			url: '/page3',
+			templateUrl: 'views/game-page3.html'
+		})
 	});
