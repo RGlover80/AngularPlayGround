@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css "href="libs/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body ng-app="MyApp">
+    <script src="libs/jquery/dist/jquery.js"></script>
+    <script src="libs/angular/angular.js"></script>
+    <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="libs/angular-resource/angular-resource.js"></script>
+    <script src="libs/angular-cookies/angular-cookies.js"></script>
+    <script src="libs/angular-sanitize/angular-sanitize.js"></script>
+    <script src="libs/angular-route/angular-route.js"></script>
+    <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="control.js"></script>
+
+    <nav class="navbar navbar-inverse">
+		<div class="navbar-header">
+			<a class="navbar-brand" ui-sref="home">Angular</a>
+		</div>
+
+		<!-- LINK TO OUR PAGES. ANGULAR HANDLES THE ROUTING HERE -->
+		<ul class="nav navbar-nav">
+			<li><a ui-sref="nerds">Local Storage</a></li>
+			<li><a ui-sref="geeks">Directive</a></li>
+			<li><a ui-sref="nested">Nested Views</a></li>
+			<li><a ui-sref="multipleViews">Multiple Views</a></li>
+			<li><a ui-sref="game">Game</a></li>
+		</ul>
+	</nav>
+	<div ng-controller="AppCtrl">
+		Say hello to: <input type ="text" ng-model="newname"> </br>
+		<h1>Hello, {{newname}} </h1>
+	</div>
+</body>
+
+
+
+<html>
